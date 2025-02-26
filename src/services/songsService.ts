@@ -10,7 +10,7 @@ export const fetchSongsApi = async () => {
 };
 
 export const addSong = async (newSong: Song): Promise<Song> => {
-  const response = await axios.post(API_BASE_URL, newSong);
+  const response = await axios.post(`${API_BASE_URL}songs`, newSong);
   return response.data;
 };
 
