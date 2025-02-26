@@ -4,7 +4,8 @@ import { Song } from "../types/songTypes";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 export const fetchSongsApi = async () => {
-  const response = await axios.get(API_BASE_URL);
+  const response = await axios.get(`${API_BASE_URL}songs`);
+  console.log({ response });
   return response.data.songs;
 };
 
